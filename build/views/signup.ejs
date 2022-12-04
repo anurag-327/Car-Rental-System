@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Up</title>
+    <link rel="stylesheet" href="../styles/login.css">
+</head>
+<body>
+  <header>
+    <a href="#" class="logo"><img src="img/jeep.jpg" alt=""></a>
+
+    <div class="bx bx-menu" id="menu-icon"></div>
+
+    <ul class="navbar">
+        <li><a href="home">Home</a></li>
+        <!-- <li><a href="#ride">Ride</a></li> -->
+        <!-- <li><a href="#about">About</a></li> -->
+        <li><a href="contact">Contact Us</a></li>
+        <!-- <li><a href="#reviews">Reviews</a></li> -->
+    </ul>
+    <div class="header-btn">
+        <!-- <a href="#" class="sign-up">Sign Up</a> -->
+        <a href="/login" class="sign-in">Sign In</a>
+    </div>
+</header>
+
+
+    <section>
+        <div class="logo text-center">
+            <h1>CarRent</h1>
+          </div>
+          <div class="wrapper">
+            <div class="inner-warpper text-center">
+              <h2 class="title">Create Your Account</h2>
+              <form action="/sign-up" id="formvalidate" method="post">
+                <div class="input-group">
+                  <!-- <label class="palceholder" for="name">User Name</label> -->
+                  <input class="form-control" name="name" id="Name" type="text" placeholder="User Name" required/>
+                  <span class="lighting"></span>
+                </div>
+                <div class="input-group">
+                  <!-- <label class="palceholder" for="email">Email address</label> -->
+                  <input class="form-control" name="email" id="emailName" type="email" placeholder="Email address" required />
+                  <span class="lighting"></span>
+                </div>
+                <div class="input-group">
+                  <!-- <label class="palceholder" for="password">Password</label> -->
+                  <input class="form-control" name="password" id="userPassword" type="password" placeholder="Password"/>
+                  <span class="lighting"></span>
+                </div>
+                <div class="input-group">
+                  <!-- <label class="palceholder" for="password">Password</label> -->
+                  <input class="form-control" name="confirmpassword" id="userPassword" type="password" placeholder="Confirm Password" />
+                  <span class="lighting"></span>
+                </div>
+          
+                <button type="submit" id="login">Create</button>
+                
+              </form>
+            </div>
+            
+          </div>
+        </section>
+          
+</body>
+</html>

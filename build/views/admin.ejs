@@ -1,0 +1,167 @@
+
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="UTF-8">
+    <link href='../styles/admin.css' rel='stylesheet'>
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   </head>
+<body>
+  <div class="sidebar">
+    <div class="logo-details">
+      <i class='bx bxl-c-plus-plus'></i>
+      <span class="logo_name">Rental Car</span>
+    </div>
+      <ul class="nav-links">
+        <li>
+          <a href="#" class="active">
+            <i class='bx bx-grid-alt' ></i>
+            <span class="user_details">User Details</span>
+
+          
+          </a>
+        </li>
+        <li>
+          <a href="#">
+            <i class='bx bx-box' ></i>
+            <span class="car_details">Car Details</span>
+          </a>
+        </li>
+        <li>
+          <a href="#">
+            <i class='bx bx-list-ul' ></i>
+            <span class="booking_details">Booking Details</span>
+          </a>
+        </li>
+        <li>
+          <a href="#">
+            <i class='bx bx-pie-chart-alt-2' ></i>
+            <span class="admin_details">Admin Details</span>
+          </a>
+        </li>
+        <li class="log_out">
+          <a href="#">
+            <i class='bx bx-log-out'></i>
+            <span class="links_name">Log out</span>
+          </a>
+        </li>
+      </ul>
+  </div>
+  <section class="home-section">
+    <nav>
+      <div class="sidebar-button">
+        <i class='bx bx-menu sidebarBtn'></i>
+        <span class="dashboard">Admin</span>
+      </div>
+      <div class="search-box">
+        <input type="text" placeholder="Search...">
+        <i class='bx bx-search' ></i>
+      </div>
+      <div class="profile-details">
+        <!--<img src="images/profile.jpg" alt="">-->
+        <span class="admin_name"><%= currentuser.name %></span>
+        <i class='bx bx-chevron-down' ></i>
+      </div>
+    </nav>
+     </section>
+<!-- <div>
+    <h1><%= currentuser.name %></h1>
+</div> -->
+     <div class="userdetails">
+        <h1>User Details</h1>
+        <table>
+            <tr>
+              <th>Name</th>
+              <th>Email</th>
+              <th>Phone Number</th>
+              
+            </tr>
+            <% for(let i of users) { %>
+            <tr>
+              <td><%= i.name %> </td>
+              <td><%= i.email %></td>
+              <td><%= i.phoneno %></td>
+            </tr>
+            <% } %>
+          </table>
+        </div>
+
+     <div class="admindetails hidden">
+        <h1>Admin Details</h1>
+        <table>
+            <tr>
+              <th>Name</th>
+              <th>Email</th>
+              <th>Phone Number</th>
+              
+            </tr>
+            <% for(let i of admins) { %>
+            <tr>
+              <td><%= i.name %> </td>
+              <td><%= i.email %></td>
+              <td><%= i.phoneno %></td>
+            </tr>
+            <% } %>
+          </table>
+        </div>
+
+
+
+     <div class="bookingdetails hidden">
+        <h1>Bookings</h1>
+        <table>
+            <tr>
+              <th>Name</th>
+              <th>Email</th>
+              <th>Phone Number</th>
+              <th>PickUp Adddress</th>
+              <th>Destination Address</th>
+              <th>Pickup Date</th>
+              <th>Dropoff Date</th>
+            </tr>
+            <% for(let i of bookings) { %>
+            <tr>
+              <td><%= i.firstname %> <%= i.lastname %></td>
+              <td><%= i.email %></td>
+              <td><%= i.phoneno %></td>
+              <td><%= i.pickupstreetaddress %></td>
+              <td><%= i.destinationstreetaddress %></td>
+              <td><%= i.pickupdate %></td>
+              <td><%= i.dropoffdate %></td>
+            </tr>
+            <% } %>
+          </table>
+        </div>
+
+     <div class="cardetails hidden">
+        <h1>Car Details</h1>
+        <table>
+            <tr>
+              <th>Car Image</th>
+              <th>Car Name</th>
+              <th>Car Number</th>
+              <th>Owner Name</th>
+              <th>Type</th>
+              <th>Rate</th>
+            </tr>
+            <% for(let i of cars) { %>
+            <tr>
+              <td><img src="<%= i.src %>" alt="car image"></td>
+              <td><%= i.carname %></td>
+              <td><%= i.carnumber %></td>
+              <td><%= i.ownername %></td>
+              <td><%= i.type %></td>
+              <td><%= i.rate %> per day</td>
+            </tr>
+            <% } %>
+          </table>
+        </div>
+
+  <script src="../scripts/admin.js">
+ </script>
+
+</body>
+</html>
+
+
+</body>

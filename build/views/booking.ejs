@@ -1,0 +1,380 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../styles/booking.css">
+    <title>Carrental-Booking</title>
+</head>
+<body>
+  <!-- <div class="testbox">
+    <form action="/">
+      <div class="banner">
+        <h1>Car Booking Form</h1>
+      </div>
+      <div class="item">
+        <p>Name</p>
+        <div class="name-item">
+          <input type="text" name="name" placeholder="First" />
+          <input type="text" name="name" placeholder="Last" />
+        </div>
+      </div>
+      <div class="item">
+        <p>Email</p>
+        <input type="text" name="name"/>
+      </div>
+      <div class="item">
+        <p>Phone</p>
+        <input type="text" name="name"/>
+      </div>
+      <div class="item">
+        <p>Number of Passengers</p>
+        <input type="text" name="name"/>
+      </div>
+      <div class="item">
+        <p>Contact Address</p>
+        <input type="text" name="name" placeholder="Street address" />
+       
+        <div class="city-item">
+          <input type="text" name="name" placeholder="City" />
+          <input type="text" name="name" placeholder="Region" />
+          <input type="text" name="name" placeholder="Postal / Zip code" />
+          <select>
+            <option value="">Country</option>
+            <option value="1">INDIA</option>
+          </select>
+        </div>
+      </div>
+      <div class="item">
+        <p>Pick Up Date</p>
+        <input type="date" name="bdate" id="pickupdtae"/>
+        <i class="fas fa-calendar-alt"></i>
+      </div>
+      <div class="item">
+        <p>Pick Up Time</p>
+        <input type="time" name="name" />
+        <i class="fas fa-clock"></i>
+      </div>
+      <div class="item">
+        <p>Pick Up Point</p>
+        <input type="text" name="name" placeholder="Street address" />
+        <div class="city-item">
+          <input type="text" name="name" placeholder="City" />
+          <input type="text" name="name" placeholder="Region" />
+          <input type="text" name="name" placeholder="Postal / Zip code" />
+          <select>
+            <option value="">Country</option>
+            <option value="1">INDIA</option>
+          </select>
+        </div>
+      </div>
+      <div class="item">
+        <p>Destination</p>
+        <input type="text" name="name" placeholder="Street address" />
+        <div class="city-item">
+          <input type="text" name="name" placeholder="City" />
+          <input type="text" name="name" placeholder="Region" />
+          <input type="text" name="name" placeholder="Postal / Zip code" />
+          <select>
+            <option value="">Country</option>
+            <option value="1">INDIA</option>
+          </select>
+        </div>
+      </div>
+      <div class="item">
+        <p>Notes</p>
+        <textarea rows="3"></textarea>
+      </div>
+      <div class="btn-block">
+        <button type="submit" href="/">BOOK NOW</button>
+      </div>
+    </form>
+  </div> -->
+
+
+    <div class="heading">BOOK YOUR CAR</div>
+    <div class="form-container">
+        <div class="form-image-container">
+            <img class="form-image " src="<%= car.src%>" alt="car">
+        </div>
+
+        <div class="form-container-content">
+          <form action="/book" method="post">
+            <div class="banner">
+              <h1>Car Booking Form</h1>
+            </div>
+            <div class="item">
+              <p>Name</p>
+              <div class="name-item">
+                <input type="text" name="firstname" placeholder="First" />
+                <input type="text" name="lastname" placeholder="Last" />
+              </div>
+            </div>
+            <div class="item">
+              <p>Email</p>
+              <input type="email" name="email"/>
+            </div>
+            <div class="item">
+              <p>Phone</p>
+              <input type="text" name="phoneno"/>
+            </div>
+            <div class="item">
+              <p>Number of Passengers</p>
+              <input type="text" name="passengercount"/>
+            </div>
+            <div class="item">
+              <p>Contact Address</p>
+              <input type="text" name="userstreetaddress" placeholder="Street address" />
+             
+              <div class="city-item">
+                <input type="text" name="usercity" placeholder="City" />
+                <input type="text" name="userregion" placeholder="Region" />
+                <input type="text" name="userpincode" placeholder="Postal / Zip code" />
+                <select>
+                  <option value="">Country</option>
+                  <option value="1">INDIA</option>
+                </select>
+              </div>
+            </div>
+            
+            
+            <div class="item">
+              <p>Pick Up Point</p>
+              <input type="text" name="pickupstreetaddress" placeholder="Street address" />
+              <div class="city-item">
+                <input type="text" name="pickupcity" placeholder="City" />
+                <input type="text" name="pickupregion" placeholder="Region" />
+                <input type="text" name="pickuppincode" placeholder="Postal / Zip code" />
+               
+                <select>
+                  <option value="">Country</option>
+                  <option value="1">INDIA</option>
+                </select>
+              </div>
+            </div>
+            <div class="item">
+              <p>Pick Up Date</p>
+              <input type="date" name="pickupdate" id="pickupdate" onchange="leave()" min="2022-11-30" max="2022-12-30"/>
+              <!-- <i class="fas fa-calendar-alt"></i> -->
+            </div>
+            <div class="item">
+              <p>Destination</p>
+              <input type="text" name="destionationstreetaddress" placeholder="Street address" />
+              <div class="city-item">
+                <input type="text" name="destinationcity" placeholder="City" />
+                <input type="text" name="destinationregion" placeholder="Region" />
+                <input type="text" name="destinationpincode" placeholder="Postal / Zip code" />
+                <select>
+                  <option value="">Country</option>
+                  <option value="1">INDIA</option>
+                </select>
+              </div>
+            </div>
+            <div class="item">
+              <p>Drop Off Date</p>
+              <input type="date" name="dropoffdate" id="dropoffdate" onchange="validate()" min="2022-12-01" max="2022-12-30"/>
+            </div>
+            <div class="item">
+              <p>Notes</p>
+              <textarea rows="3" name="extranote"></textarea>
+            </div>
+            <div class="form-component">
+              <span>Days:</span><span id="cnt-day"> 00</span>
+          </div>
+            <div class="btn-block">
+              <button type="submit">BOOK NOW</button>
+            </div>
+            <!-- <span>Car Code</span> -->
+            <input type="text" class="hidden" name="carcode" placeholder="car Alloted" value="<%= car._id %>" readonly />
+          </form>
+        </div> 
+    </div>
+
+    <div class="car-details">
+      <div class="first">
+        <h1>Car Details </h1>
+        <h1>Car Details </h1>
+      </div>
+      <div>
+        <span>Car Name : </span>
+        <p><%= car.carname %></p>
+      </div>
+      <div>
+        <span>Car Number : </span>
+        <p><%= car.carnumber %></p>
+      </div>
+      
+      <div>
+        <span>Car Type : </span>
+        <p><%= car.type %></p>
+      </div>
+      <div>
+        <span>Rate : </span>
+        <p><%= car.rate %> per day</p>
+      </div>
+
+      <div>
+        <span>Owner Name : </span>
+        <div class="inline">
+
+          <p><%= car.ownername %></p>
+        </div>
+      </div>
+      <div>
+        <span>Owner contact : </span>
+        <p><%= car.ownercontact %></p>
+      </div>
+     
+      <div>
+        <span>Driver Name :</span>
+        <p> <%= car.drivername %></p>
+      </div>
+      <div>
+        <span>Driver contact : </span>
+        <div>
+          <p><%= car.drivercontact%></p>
+        </div>
+      </div>
+    </div>
+    
+     
+    <!-- <script  src="../scripts/booking.js"></script> -->
+
+    
+</body>
+</html>
+
+
+
+<!-- <form action="/book" class="form-content" method="post">
+  <div class="item">
+    <p>Name</p>
+    <div class="name-item">
+      <input type="text" name="name" placeholder="First" />
+      <input type="text" name="name" placeholder="Last" />
+    </div>
+  </div>
+  <div class="item">
+    <p>Email</p>
+    <input type="text" name="name"/>
+  </div>
+  <div class="item">
+    <p>Phone</p>
+    <input type="text" name="name"/>
+  </div>
+  <div class="item">
+    <p>Number of Passengers</p>
+    <input type="text" name="name"/>
+  </div>
+  <div class="item">
+    <p>Contact Address</p>
+    <input type="text" name="name" placeholder="Street address" />
+   
+    <div class="city-item">
+      <input type="text" name="name" placeholder="City" />
+      <input type="text" name="name" placeholder="Region" />
+      <input type="text" name="name" placeholder="Postal / Zip code" />
+      <select>
+        <option value="">Country</option>
+        <option value="1">INDIA</option>
+      </select>
+    </div>
+  </div>
+  <div class="form-component flexcol">
+    <div>
+      <label for="pickup-point">Pickup Location </label>
+      <input type="text" rows="2" cols="30" id="pickup-point" name="pickuppoint" placeholder="Pickup Point" required>
+    </div>
+      <div>
+        <label for="destination-point">Drop-off Location </label>
+        <input type="text" rows="" cols="30" id="destination-point" name="destinatiopoint" placeholder="Destination Point" required>
+      </div>
+      
+  </div>
+
+
+  <div class="form-component flex">
+      <div class="pickup-date">
+          <label for="pickup-date" name="pickupdate"> Pickup Date: </label>
+          <input type="date" name="pickupdate" id="pickupdate" onchange="leave()" required min="2022-11-30" max="2022-12-30">
+      </div>
+     <div>
+      <label for="pick-up-time">Pick Up time</label>
+      <input type="number" class="imp" max="12" min="1">
+      <select name="pickuptime" id="pick-up-time">
+             <option value="01">01 PM</option>
+             <option value="02">02 PM</option>
+             <option value="03">03 PM</option>
+             <option value="04">04 PM</option>
+             <option value="05">05 PM</option>
+             <option value="06">06 PM</option>
+             <option value="07">07 PM</option>
+             <option value="08">08 AM</option>
+             <option value="09">09 PM</option>
+             <option value="10">10 PM</option>
+             <option value="11">11 PM</option>
+             <option value="12">12 PM</option>
+             <option value="01">01 AM</option>
+             <option value="02">02 AM</option>
+             <option value="03">03 AM</option>
+             <option value="04">04 AM</option>
+             <option value="05">05 AM</option>
+             <option value="06">06 AM</option>
+             <option value="07">07 AM</option>
+             <option value="08">08 AM</option>
+             <option value="09">09 AM</option>
+             <option value="10">10 AM</option>
+             <option value="11">11 AM</option>
+             <option value="12">12 AM</option>
+             
+      </select>
+     </div>
+      
+  </div>
+  
+  <div class="form-component flexdrop">
+      <div>
+          <label for="dropoffdate" id="date-off">Drop Off date : </label>
+          <input type="date" id="dropoffdate" onchange="validate()" required min="2022-12-01" max="2022-12-30">
+      </div>
+     <div>
+      <label for="pick-up-time">Drop Off time</label>
+      <input type="number" class="imp" max="12" min="1">
+      <select name="dropofftime" id="drop-off-time">
+        <option value="01">01 PM</option>
+        <option value="02">02 PM</option>
+        <option value="03">03 PM</option>
+        <option value="04">04 PM</option>
+        <option value="05">05 PM</option>
+        <option value="06">06 PM</option>
+        <option value="07">07 PM</option>
+        <option value="08">08 AM</option>
+        <option value="09">09 PM</option>
+        <option value="10">10 PM</option>
+        <option value="11">11 PM</option>
+        <option value="12">12 PM</option>
+        <option value="01">01 AM</option>
+        <option value="02">02 AM</option>
+        <option value="03">03 AM</option>
+        <option value="04">04 AM</option>
+        <option value="05">05 AM</option>
+        <option value="06">06 AM</option>
+        <option value="07">07 AM</option>
+        <option value="08">08 AM</option>
+        <option value="09">09 AM</option>
+        <option value="10">10 AM</option>
+        <option value="11">11 AM</option>
+        <option value="12">12 AM</option>
+
+            
+          </select>
+     </div>
+      
+
+  </div>
+  <div class="form-component">
+      <span>Days:</span><span id="cnt-day"> 00</span>
+  </div>
+  <button type="submit">BOOK NOW</button>
+</form> -->

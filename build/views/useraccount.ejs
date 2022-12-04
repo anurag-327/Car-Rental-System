@@ -1,0 +1,102 @@
+<head>
+    <title>Account</title>
+    <link rel="stylesheet" href="../styles/account.css">
+    <link rel="stylesheet" href="../styles/output.css">
+</head>
+<body>
+
+    <header>
+        <a href="#" class="logo"><img src="../Images/bg-8.jpg" alt=""></a>
+
+        <div class="bx bx-menu" id="menu-icon"></div>
+
+        <ul class="navbar">
+            <li><a href="home">Home</a></li>
+            <!-- <li><a href="#cars-display">Ride</a></li> -->
+            <!-- <li><a href="#about">About</a></li> -->
+            <li><a href="/contact">Contact Us</a></li>
+            <!-- <li><a href="#reviews">Reviews</a></li> -->
+        </ul>
+        <div class="header-btn">
+          <!-- <% if(locals.user) { %> -->
+          
+            <!-- <a href="account" class="sign-in">My Account</a> -->
+            <!-- <% } %> -->
+            
+            <!-- <% if(!locals.user) { %> -->
+                <!-- <a href="/signup" class="sign-in">Sign Up</a> -->
+                <!-- <a href="/login" class="sign-in">Sign In</a> -->
+                <!-- <% } %> -->
+                
+                <a href="/signout" class="sign-in">Sign Out</a>
+          
+      </div>
+      </header>
+      
+    <h1 class="text-align">Hey <%= user.name %></h1>
+    <div class="hii">
+
+        <h1>User Details</h1>
+        <div class="user-details-container">
+            <div class="user-details">
+                <div>
+                <h3>Name:</h3>
+                <input type="text" class="form-control" placeholder="" value="<%= user.name %>" readonly>
+            </div>
+            <div>
+                <h3>Phone Number:</h3>
+                <input type="text" class="form-control" placeholder="" value="<%= user.phoneno %>" readonly>
+                
+            </div>
+            <div>
+                <h3>Email:</h3>
+                <input type="text" class="form-control" placeholder="" value="<%=user.email%>" readonly>
+                
+            </div>
+            <div>
+                <h2>Contact Details</h2>
+            </div>
+            <div> 
+                <h3>Address:</h3>
+                <input type="text" class="form-control" placeholder="" value="<%= user.userstreetaddress %>" readonly>
+            </div>
+            <div>
+                
+                <h3>City:</h3>
+                <input type="text" class="form-control" placeholder="" value="<%= user.usercity %>" readonly>
+            </div>
+            <div>
+                
+                <h3>Pin Code:</h3>
+                <input type="text" class="form-control" placeholder="" value="<%= user.userpincode %>" readonly>
+            </div>
+            <div>
+                
+                <h3>Country:</h3>
+                <input type="text" class="form-control" placeholder="" value="INDIA" readonly>
+            </div>
+        </div>
+    </div>
+</div>
+
+<% if(!userbooking){ %>
+    <div class="booking-details">
+        <div>
+         <h1>My Bookings</h1>
+        </div>
+        <div class="bookings">
+            <div class="car-booked">
+                <img src="../Images/cars/fortuner.jpg" alt="car">
+            </div>
+            <div>
+                <h2 class="carname">Car Name</h2>
+                <p class="fromdate">From date</p>
+                <p class="todate">To date</p>
+            </div>
+        </div>
+    </div>
+
+<% } %>
+
+    
+</body>

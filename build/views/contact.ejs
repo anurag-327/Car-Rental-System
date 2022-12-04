@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Carrental-Contact-us</title>
+    <link rel="stylesheet" href="../styles/output.css">
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        scroll-padding-top: 2rem;
+        scroll-behavior: smooth;
+        list-style: none;
+        text-decoration: none;
+        font-family: "Poppins", sans-serif;
+      }
+      body {
+        /* opacity: 0.5; */
+        /* background-color: #22c1c4;
+             */
+        background-image: url("./firmbee-com-SpVHcbuKi6E-unsplash.jpg");
+        background-repeat: no-repeat;
+        background-size: cover;
+        z-index: -1;
+      }
+      #main {
+        display: flex;
+        /* justify-content: center; */
+        box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+      }
+      .box1 {
+        margin: auto;
+        padding: 9% 15%;
+        margin: 5%;
+        /* width: 35%; */
+      }
+      .box1 h3 {
+        padding: 0 15px;
+      }
+      .box1 p a {
+        color: black;
+        text-decoration: none;
+      }
+      .box1 p i {
+        color: black;
+        text-decoration: none;
+        padding: 10px 15px;
+      }
+      .cnt {
+        /* margin: auto; */
+
+        width: 35%;
+        padding: 7% 0;
+        /* padding-left: 10%; */
+      }
+      .cnt h2 {
+        text-align: center;
+      }
+      #box2 {
+        background-color: white;
+        z-index: 1;
+        border: 2px solid blanchedalmond;
+        border-radius: 15px;
+        padding: 13px;
+        text-align: left;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        padding-bottom: 42px;
+      }
+      .name {
+        padding: 13px 0;
+        display: inline;
+      }
+      .inp {
+        padding: 7px 10px;
+        width: 150%;
+        /* text-align: start; */
+      }
+      ::placeholder {
+        text-align: left;
+        opacity: 0.9;
+        color: lightblue;
+      }
+      .btn {
+        cursor: pointer;
+      }
+      header {
+        position: fixed;
+        width: 100%;
+        top: 0;
+        right: 0;
+        z-index: 1000;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        background: rgb(241, 229, 229);
+        padding: 15px 100px;
+      }
+      .logo img {
+        width: 40px;
+      }
+      .navbar {
+        display: flex;
+      }
+      .navbar li {
+        position: relative;
+      }
+      .navbar a {
+        font-size: 1rem;
+        padding: 10px 20px;
+        color: var(--text-color);
+        font-weight: 500;
+      }
+      .navbar a::after {
+        content: "";
+        width: 0;
+        height: 3px;
+        background: var(--gradient);
+        position: absolute;
+        bottom: -4px;
+        left: 0;
+        transition: 0.5s;
+      }
+      .navbar a:hover::after {
+        width: 100%;
+      }
+      #menu-icon {
+        font-size: 24px;
+        cursor: pointer;
+        z-index: 10001;
+        display: none;
+      }
+      .header-btn a {
+        padding: 10px 20px;
+        color: var(--text-color);
+        font-weight: 500;
+      }
+      .header-btn .sign-in {
+        background: rgb(37, 37, 237);
+        color: rgb(245, 224, 196);
+        border-radius: 0.5rem;
+      }
+      .header-btn .sign-in:hover {
+        background: var(--main-color);
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <a href="#" class="logo"><img src="img/jeep.jpg" alt="" /></a>
+
+      <div class="bx bx-menu" id="menu-icon"></div>
+
+      <ul class="navbar">
+        <li><a href="/home">Home</a></li>
+        <!-- <li><a href="#ride">Ride</a></li> -->
+        <!-- <li><a href="#services">Services</a></li> -->
+        <!-- <li><a href="#about">About</a></li> -->
+        <!-- <li><a href="#reviews">Reviews</a></li> -->
+      </ul>
+      <div class="header-btn">
+        <a href="/Signup" class="sign-up">Sign Up</a>
+        <a href="/login" class="sign-in">Sign In</a>
+      </div>
+    </header>
+
+
+      <section id="contact">
+        <div class="container">
+          <div class="content">
+            <div class="left-side">
+              <div class="address details">
+                <i class="fas fa-map-marker-alt"></i>
+                <div class="topic">Address</div>
+                <div class="text-one">KNIT SULTANPUR</div>
+                <div class="text-two">SULTANPUR</div>
+              </div>
+              <div class="phone details">
+                <i class="fas fa-phone-alt"></i>
+                <div class="topic">Phone</div>
+                <div class="text-one">+91 XXXXXXXXXX</div>
+                <div class="text-two">+91 XXXXXXXXXX</div>
+              </div>
+              <div class="email details">
+                <i class="fas fa-envelope"></i>
+                <div class="topic">Email</div>
+                <div class="text-one">carrental@gmail.com</div>
+                <div class="text-two">carrental@gmail.com</div>
+              </div>
+            </div>
+            <div class="right-side">
+              <div class="topic-text">Send us a message</div>
+              <p>If you have any query related to Booking, you can send us message from here. It's our pleasure to help you.</p>
+            <form action="#">
+              <div class="input-box">
+                <input type="text" placeholder="Enter your name">
+              </div>
+              <div class="input-box">
+                <input type="text" placeholder="Enter your email">
+              </div>
+              <div class="input-box message-box">
+                
+              </div>
+              <div class="button">
+                <input type="button" value="Send Now" >
+              </div>
+            </form>
+          </div>
+          </div>
+        </div>
+      </section>
+
+      
+    <div id="main">
+      <div class="box1">
+        <h3>Reach US</h3>
+        <p>
+          <a href="https://www.googlemaps.com" target="_blank"
+            ><i class="fa-sharp fa-solid fa-location-dot"></i>DEMO TEST</a
+          >
+        </p>
+        <p>
+          <a href="https://mail.google.com" target="_blank"
+            ><i class="fa-regular fa-envelope"></i>test@demo.com</a
+          >
+        </p>
+        <p>
+          <a href="#"><i class="fa-thin fa-phone"></i>2553255311</a>
+        </p>
+      </div>
+      <div class="cnt">
+        <h2>Be In Touch</h2>
+        <div id="box2">
+          <div class="name">
+            Name:<br />
+            <input type="text" placeholder="Enter your name" class="inp" />
+          </div>
+          <div class="name">
+            Email address:<br />
+            <input type="email" placeholder="Enter your Email" class="inp" />
+          </div>
+          <div class="name">
+            Contact number:<br />
+            <input
+              type="text"
+              placeholder="Enter your contact number"
+              class="inp"
+            />
+          </div>
+          <div class="name">
+            Querry:<br />
+            <textarea placeholder="Enter your Querry" class="inp"></textarea>
+          </div>
+          <button class="btn">SUBMIT</button>
+        </div>
+      </div>
+    </div>
+  </body>
+
+  <script
+    src="https://kit.fontawesome.com/3682bc7295.js"
+    crossorigin="anonymous"
+  ></script>
+</html>

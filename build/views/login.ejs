@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rerntalcar-login</title>
+    <!-- link to css -->
+    <link rel="stylesheet" href="../styles/login.css">
+    <!-- box icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css">
+</head>
+<body>
+    <!-- header  -->
+    <header>
+        <a href="#" class="logo"><img src="img/jeep.jpg" alt=""></a>
+
+        <div class="bx bx-menu" id="menu-icon"></div>
+
+        <ul class="navbar">
+            <li><a href="home">Home</a></li>
+            <!-- <li><a href="#ride">Ride</a></li> -->
+            <!-- <li><a href="#about">About</a></li> -->
+            <li><a href="contact">Contact Us</a></li>
+            <!-- <li><a href="#reviews">Reviews</a></li> -->
+        </ul>
+        <div class="header-btn">
+            <a href="signup" class="sign-up">Sign Up</a>
+            <!-- <a href="#" class="sign-in">Sign In</a> -->
+        </div>
+    </header>
+    <!-- home -->
+
+    <!-- partial:index.partial.html -->
+
+    <section>
+<div class="logo text-center">
+    <h1>CarRent</h1>
+  </div>
+  <div class="wrapper">
+    <div class="inner-warpper text-center">
+      <h2 class="title">Login to your account</h2>
+      <form action="login-acc" id="formvalidate" method="post">
+        <div class="input-group">
+          <!-- <label  for="name">User Name or Email address</label> -->
+          <input class="form-control" name="name" id="userName" type="text" placeholder="Enter Username or Email" required/>
+          <span class="lighting"></span>
+        </div>
+        <div class="input-group">
+          <!-- <label  for="name">User Name or Email address</label> -->
+          <input class="form-control" name="email" id="userName" type="text" placeholder="Enter Email" required/>
+          <span class="lighting"></span>
+        </div>
+        <div class="input-group">
+          <!-- <label for="password">Password</label> -->
+          <input class="form-control" name="password" id="userPassword" type="password" placeholder="Enter Password" required/>
+          <span class="lighting"></span>
+        </div>
+  
+        <button type="submit" id="login">Login</button>
+        <div class="clearfix supporter">
+          <!-- <div class="pull-left remember-me">
+            <input id="rememberMe" type="checkbox">
+            <label for="rememberMe">Remember Me</label>
+          </div>
+          <a class="forgot pull-right"  href="#">Forgot Password?</a> -->
+        </div>
+      </form>
+    </div>
+    <div class="signup-wrapper text-center">
+      <a href="signup">Don't have an accout? <span class="text-primary">Create One</span></a>
+    </div>
+  </div>
+</section>
+  
+  <!-- you don't need that :)  -->
+  <!-- <div class="direction">
+    Type something in input and click submit to see the effect
+  </div> -->
+    <!-- link to js  -->
+    <script src="../build/scripts/script.js"></script>
+    <script src='https://code.jquery.com/jquery-2.2.4.min.js'></script>
+   <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.15.0/jquery.validate.min.js'></script><script  src="./script.js"></script>
+
+</body>
+</html>

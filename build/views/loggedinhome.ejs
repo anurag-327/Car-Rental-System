@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rentalcar-Home</title>
+    <link rel="stylesheet" href="../styles/output.css">
+    <script src="https://kit.fontawesome.com/38b951bfd3.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <header>
+        <a href="#" class="logo"><img src="../Images/bg-8.jpg" alt=""></a>
+
+        <div class="bx bx-menu" id="menu-icon"></div>
+
+        <ul class="navbar">
+            <li><a href="home">Home</a></li>
+            <li><a href="#cars-display">Ride</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#contact">Contact Us</a></li>
+            <li><a href="#reviews">Reviews</a></li>
+        </ul>
+        <!-- <div class="header-btn">
+            <a href="signup" class="sign-up">Sign Up</a>
+            <a href="login" class="sign-in">Sign In</a>
+        </div> -->
+    </header>
+
+
+    <section class="display-section">
+          <div class="display-image">
+            <img class="image" src="./Images/banner6.png" alt="main screen">
+          </div>
+          <!-- <div class="display-banner">
+            <span class="display-banner-quote">Rent A Car</span>
+            <span class="display-banner-para">" Taking to the Destinations "</span>
+          </div> -->
+    </section>
+
+
+    <section>
+      <p class="availaible-cars-heading">CARS AVAILAIBLE</p>
+
+      <div id="cars-display" class="flex-row">
+
+        <% for(let i of cars) { %>
+           <div class="cars-display-data">
+            <div class="cars-display-image-container">
+                <img src="<%= i.src %>" class="cars-display-image" alt="car image">
+            </div>
+            <div class="cars-display-info">
+                <div class="car-name">
+                    <span><%= i.carname %></span>
+                </div>
+                <div class="type-rate-info">
+                    <div class="car-type">
+                       <span >Type : <%= i.type%> </span>
+                    </div>
+                    <div>|
+                    </div>
+                    <div class="car-rate">
+                       <span>Rate : <%= i.rate%> per day</span>
+                    </div> 
+                    
+                </div>
+                <div class="book-btn-container">
+                <a href="booking/<%= i._id%>"> <button class="book-btn" data-id= <%= i._id %> >BOOK NOW</button></a>
+                   
+                </div>
+            </div>
+        </div>
+        <% } %> 
+      </div>
+
+    </section>
+ 
+    <section id="about">
+      <h1>About section</h1>
+      <p>This project is built using HTML, CSS, Javascript, Express Js, MongoDb as Database</p>
+    </section>
+
+
+    <section id="contact">
+      <div class="container">
+        <div class="content">
+          <div class="left-side">
+            <div class="address details">
+              <i class="fas fa-map-marker-alt"></i>
+              <div class="topic">Address</div>
+              <div class="text-one">KNIT SULTANPUR</div>
+              <div class="text-two">SULTANPUR</div>
+            </div>
+            <div class="phone details">
+              <i class="fas fa-phone-alt"></i>
+              <div class="topic">Phone</div>
+              <div class="text-one">+91 XXXXXXXXXX</div>
+              <div class="text-two">+91 XXXXXXXXXX</div>
+            </div>
+            <div class="email details">
+              <i class="fas fa-envelope"></i>
+              <div class="topic">Email</div>
+              <div class="text-one">carrental@gmail.com</div>
+              <div class="text-two">carrental@gmail.com</div>
+            </div>
+          </div>
+          <div class="right-side">
+            <div class="topic-text">Send us a message</div>
+            <p>If you have any query related to Booking, you can send us message from here. It's our pleasure to help you.</p>
+          <form action="#">
+            <div class="input-box">
+              <input type="text" placeholder="Enter your name">
+            </div>
+            <div class="input-box">
+              <input type="text" placeholder="Enter your email">
+            </div>
+            <div class="input-box message-box">
+              
+            </div>
+            <div class="button">
+              <input type="button" value="Send Now" >
+            </div>
+          </form>
+        </div>
+        </div>
+      </div>
+    </section>
+    <footer>
+        <div class="center">
+          Copyright &copy; &nbsp; www.rentalcar.com. &nbsp;   All rights reserved
+        </div>
+    </footer>
+<!-- <script src="../scripts/index.js"></script> -->
+<!-- <script src="../../model/db.js"></script> -->
+</body>
+</html>
