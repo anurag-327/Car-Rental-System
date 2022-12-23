@@ -1,0 +1,79 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-padding-top: 2rem;
+    scroll-behavior: smooth;
+    list-style: none;
+    text-decoration: none;
+    font-family: 'Poppins', sans-serif;
+}
+:root{
+    --main-color:rgb(227, 95, 12);
+    --second-color:rgb(216, 173, 15);
+    --text-color:rgb(90, 88, 88);
+    --gradient: linear-gradient(rgb(227, 95, 12),rgb(216, 173, 15));
+}
+.user-details-container
+{
+    display: flex;
+    justify-content: center;
+    /* position: relative; */
+    /* margin-top:6rem; */
+    margin-bottom:5rem;
+    background-color:aliceblue;
+    padding: 10px;
+}
+.hii
+{
+    margin-top: 0.5rem;
+    background-color:rgb(241, 229, 229);
+}
+.hii h1
+{
+    text-align: center;
+}
+.user-details
+{
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    justify-content: center;
+}
+.user-details input{
+    width:30rem;
+    padding: 5px;
+     /* border:3px solid blue; */
+    border-radius: 5px; 
+    border: transparent;
+    outline: none;
+    resize: none;
+}
+
+.user-details input :active
+{
+    border: transparent;
+    outline: none;
+    resize: none;
+}
+.user-details h3
+{
+    color: var(--text-color);
+}
+
+.text-align
+{
+    margin-top: 1rem;
+    text-align: center;
+}
+h1{
+    color: blueviolet;
+}
+i{
+    color: black;
+}
+.hidden
+{
+    display: none;
+}

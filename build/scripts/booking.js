@@ -1,7 +1,6 @@
 
 
 var leave=function(){
-    alert("hii");
     const pickupdate=document.querySelector("#pickupdate");
     // const dropoffdate=document.querySelector("#dropoffdate");
     console.log(pickupdate.valueAsNumber);
@@ -9,7 +8,6 @@ var leave=function(){
 
 function validate()
 {
-    alert("h");
     const pickupdate=document.querySelector("#pickupdate");
     const dropoffdate=document.querySelector("#dropoffdate");
     firstDate=pickupdate.value;

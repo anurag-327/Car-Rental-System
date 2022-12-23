@@ -61,16 +61,27 @@ app.post('/sign-up',function(req,res)
     }
     else
     {
-        logindetails.findOne({email:req.body.email},function(err,user)
+        console.log("before break");
+        logindetails.findOne({email:req.body.email},async function(err,user)
         {
+            console.log("after break;");
+            if(err)
+            console.log(err.message);
+            console.log("after err");
             if(!user)
             {
-                const newuser=new logindetails({
-                    name:req.body.name,
-                    email:req.body.email,
-                    password:req.body.password
-                })
-                newuser.save();
+                const createDocument = async () =>
+                {
+                  try{
+                        const newUser=new logindetails(req.body)
+                        const result= await newUser.save();
+                        console.log(result);
+                      }catch(err)
+                     {
+                         console.log(err.message);
+                     }
+                }
+                createDocument();
                 return res.render('login');
             }
            else
@@ -86,7 +97,7 @@ app.post('/sign-up',function(req,res)
 })
 app.post('/login-acc',async function(req,res)
 {
-    console.log(req.body);
+    // console.log(req.body);
     logindetails.findOne({email:req.body.email},function(err,user)
     {
         if(err)
@@ -110,7 +121,8 @@ app.post('/login-acc',async function(req,res)
         }
         else
         {
-            return res.redirect("back");
+            return res.render('error',{error:"Wrong Login Credential",errorroute:"login"});
+            // return res.redirect("back");
         }
     })
    
@@ -202,7 +214,7 @@ app.get('/account',async function(req,res)
     const user=await logindetails.findOne({_id:req.cookies.user_id})
     const userbooking=await bookingdetails.find({userid:req.cookies.user_id})
     console.log(user,userbooking);
-    return res.render('useraccount',{user:user,userbooking:userbooking}); 
+    return res.render('myaccount',{user:user,userbooking:userbooking}); 
 })
 app.get('/admin',async function(req,res)
 {

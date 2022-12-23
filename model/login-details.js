@@ -19,18 +19,13 @@ const loginschema=new mongoose.Schema(
             type:String,
             required:true,
         },
-        phoneno:Number ,
-        userstreetaddress:String ,
-        usercity:String ,
-        userregion:String ,
-        userpincode:Number 
     },
     {
         timestamps:true
     }
 )
 
-const Login= new mongoose.model("Login-Details",loginschema);
+const Login= new mongoose.model("login-Details",loginschema);
 module.exports=Login;
 
 // const insertdata= async (name,pass,email) =>
