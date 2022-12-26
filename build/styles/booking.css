@@ -42,7 +42,7 @@ section{
   /* text-align: center; */
   justify-content: center;
   gap:3rem;
-  padding:10px ;
+  padding:20px ;
   box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
 }
 
@@ -215,7 +215,7 @@ html, body {
   padding: 20px;
   }
   form {
-  width: 100%;
+  width: 30rem;
   padding: 20px;
   border-radius: 6px;
   background: #fff;
@@ -311,5 +311,25 @@ html, body {
   button:hover {
   background: #666;
   }
- 
+ .block{
+  display: block;
+ }
+ .grad {
+  background-image: linear-gradient(to right, rgb(188, 188, 246) , rgb(237, 228, 230));
+}
 
+.grad2
+{
+  background-image: linear-gradient(to right, rgb(235, 238, 244) , rgb(185, 173, 175));
+
+}
+.inline
+{
+  display: inline;
+}
+.special
+{
+  width: 5rem;
+  border:transparent;
+  outline: none;
+}

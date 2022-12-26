@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Rentalcar-Home</title>
-    <link rel="stylesheet" href="../styles/output.css">
+    <link rel="stylesheet" href="../../build/styles/output.css">
     <script src="https://kit.fontawesome.com/38b951bfd3.js" crossorigin="anonymous"></script>
 </head>
 <body>
@@ -15,16 +15,16 @@
         <div class="bx bx-menu" id="menu-icon"></div>
 
         <ul class="navbar">
-            <li><a href="home">Home</a></li>
+            <li><a href="/home">Home</a></li>
             <li><a href="#cars-display">Ride</a></li>
             <li><a href="#about">About</a></li>
-            <li><a href="/contact">Contact Us</a></li>
+            <li><a href="/home/contact">Contact Us</a></li>
             <li><a href="#reviews">Reviews</a></li>
         </ul>
         <div class="header-btn">
           <% if(locals.user) { %>
           
-            <a href="account" class="sign-in">My Account</a>
+            <a href="/user/account" class="sign-in">My Account</a>
               <a href="/signout" class="sign-in">Sign Out</a>
           <% } %>
 
@@ -76,10 +76,10 @@
                 </div>
                 <div class="book-btn-container">
                   <% if(locals.user) { %>
-                    <a href="booking/<%= i._id%>"> <button class="book-btn" data-id= <%= i._id %> >BOOK NOW</button></a>
+                    <a href="/user/booking/<%= i._id%>"> <button class="book-btn" data-id= <%= i._id %> >BOOK NOW</button></a>
                     <% } %>
                     <% if(!locals.user) { %>
-                      <a href="login"> <button class="book-btn" data-id=${cars[i].id} >BOOK NOW</button></a>
+                      <a href="/login"> <button class="book-btn" data-id=${cars[i].id} >login</button></a>
               <% } %>
     
       

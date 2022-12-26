@@ -14,7 +14,8 @@ function validate()
     secondDate=dropoffdate.value;
     var noofdays=findTheDifferenceBetweenTwoDates(firstDate,secondDate);
     console.log(noofdays);
-    document.querySelector("#cnt-day").innerHTML=noofdays;
+    document.querySelector("#cnt-day").value=noofdays;
+    // document.querySelector("price").i=
 }
 
 

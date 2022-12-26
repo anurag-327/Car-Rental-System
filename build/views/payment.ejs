@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Billing page</title>
-    <link rel="stylesheet" href="../styles/payment.css">
+    <link rel="stylesheet" href="../../build/styles/payment.css">
 </head>
 <body>
     <div class="container">
@@ -18,6 +18,7 @@
     
                     <h3 class="title">billing address</h3>
     
+                    
                     <div class="inputBox">
                         <span>full name :</span>
                         <input type="text" placeholder="durgesh pratap singh">
@@ -78,6 +79,10 @@
                             <span>CVV :</span>
                             <input type="text" placeholder="1234">
                         </div>
+                    </div>
+                    <div class="inputBox">
+                        <span>Total price :</span>
+                        <input type="text" placeholder="Price" value="<%= price %>" readonly>
                     </div>
     
                 </div>
